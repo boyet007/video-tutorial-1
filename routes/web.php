@@ -11,10 +11,36 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+//Route::get('/', function () {
+///    return view('welcome', [
+//    	'name' => 'Laravel',
+//    	'age' => 3
+//    ]);
+//});
+
+//Route::get('/', function(){
+//	return view('welcome') -> with('name', 'World');
+//});
+//Route::get('/', function(){
+
+//$name = 'Jeffrey';
+//$age = 30;
+//	return view('welcome', compact('name', 'age'));
+//});
+
+Route::get('/', function(){
+	$tasks = [
+		'Go to store',
+		'Finish my screen', 
+		'Clean the house'
+	];
+
+	return view ('welcome', compact('tasks'));
 });
 
 Route::get('about', function () {
     return view('about');
 });
+
+
