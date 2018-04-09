@@ -29,14 +29,21 @@
 //	return view('welcome', compact('name', 'age'));
 //});
 
-Route::get('/', function(){
-	$tasks = [
-		'Go to store',
-		'Finish my screen', 
-		'Clean the house'
-	];
+//Route::get('/', function(){
+//	$tasks = [
+//		'Go to store',
+//		'Finish my screen', 
+//		'Clean the house'
+//	];
+///
+//	return view ('welcome', compact('tasks'));
+//});
 
-	return view ('welcome', compact('tasks'));
+Route::get('/', function(){
+	$tasks = DB::table('tasks')->get();
+	return $tasks;
+
+	//return view ('welcome', compact('tasks'));
 });
 
 Route::get('about', function () {
