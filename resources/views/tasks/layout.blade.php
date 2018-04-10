@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>My Application</title>
 </head>
 <body>
-<h1>
+
+	@yield('content')
 	
-		{{ $task->body }}
-</h1>
 </body>
 </html>

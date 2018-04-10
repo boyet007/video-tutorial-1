@@ -37,9 +37,9 @@
 //	return view ('tasks.index', compact('tasks'));
 //});
 
-Route::get('/tasks', 'TasksController@index');
+//Route::get('/tasks', 'TasksController@index');
 
-Route::get('/tasks/{task}', 'TasksController@show');
+//Route::get('/tasks/{task}', 'TasksController@show');
 
 //Route::get('/tasks', function(){
 	//$tasks = DB::table('tasks')->get();
@@ -67,13 +67,15 @@ Route::get('/tasks/{task}', 'TasksController@show');
 //	return view ('tasks.show', compact('task'));
 //});
 
+//Route::get('about', function () {
+//    return view('about');
+//});
 
+Route::get('/', 'PostsController@index');
 
-
-Route::get('about', function () {
-    return view('about');
-});
-
+// controller => PostsController
+// Eloquent Model => Post
+// migration => create_posts_table
 
 
 
