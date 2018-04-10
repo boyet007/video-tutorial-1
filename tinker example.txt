@@ -1,0 +1,31 @@
+       },
+     ],
+   }
+>>> App\Task::pluck('body')
+=> Illuminate\Support\Collection {#785
+     all: [
+       "Go to store",
+       "Finish my screenshat",
+       "clean the house",
+     ],
+   }
+>>> App\Task::pluck('id')
+=> Illuminate\Support\Collection {#777
+     all: [
+       1,
+       2,
+       3,
+     ],
+   }
+>>> App\Task::pluck('body')
+=> Illuminate\Support\Collection {#790
+     all: [
+       "Go to store",
+       "Finish my screenshat",
+       "clean the house",
+     ],
+   }
+>>>
+ App\Task::pluck('body')->first()
+=> "Go to store"
+>>>
