@@ -29,3 +29,19 @@
  App\Task::pluck('body')->first()
 => "Go to store"
 >>>
+
+
+>>> $task = new App\Task;
+>>> $task->body = 'Go to the market';
+>>> $task->complete=false;
+>>> $task->save()
+
+>>> app\Task::first()
+
+>>> app\Task::first()->completed;
+
+>>> App\Task::where('completed', 0)
+
+>>> App\Task::incomplete()
+
+>>> App\Task::incomplete()->get()
