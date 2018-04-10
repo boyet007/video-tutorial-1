@@ -16,11 +16,17 @@ class TasksController extends Controller
 		return view ('tasks.index', compact('tasks'));	
 	}
 
-	public function show($id){
-		$task = Task::find($id);
+	//public function show($id){
+//		$task = Task::find($id);
 
+//		return view ('tasks.show', compact('task'));
+//	}
 
-		return view ('tasks.show', compact('task'));
+	public function show(Task $task){ //variable harus sama dengan yang dikirim dari routing
+
+		//return $task;
+		return view ('tasks.show', compact('task'));		
+
 	}
 
 }
